@@ -1,0 +1,411 @@
+<%- include('includes/head.ejs') %>
+
+    
+   </head>
+   
+   <body>
+      <!-- Preloader -->
+      <div class="loader-wrap">
+         <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+         </div>
+         <p>Загрузка...</p>
+      </div>
+      <!-- Ends -->
+      <div id="left"></div>
+      <div id="right"></div>
+      <div id="top"></div>
+      <div id="bottom"></div>
+      
+      <!--*-*-*-*-*-*-*-*-*-*- Header *-*-*-*-*-*-*-*-*-*-->
+
+      <header id="header-megamenu"> 
+         
+         <!--*-*-*-*-*-*-*-*-*-*- NAVIGATION BAR *-*-*-*-*-*-*-*-*-*-->
+         <%- include('includes/navigation.ejs') %>
+
+         <!--*-*-*-*-*-*-*-*-*-*- END NAVIGATION BAR *-*-*-*-*-*-*-*-*-*-->  
+         
+         <!--*-*-*-*-*-*-*-*-*-*- BOOTSTRAP CAROUSEL *-*-*-*-*-*-*-*-*-*--> 
+         
+         <div id="bg-img">
+            <div class="parallax-bg overlay-light pad-t-120 pad-b-120" style="background-image:url('img/blog-52.jpg');"
+               data-center="background-position: 50% 0px;" 
+               data-top-bottom="background-position: 50% -100px;" 
+               data-anchor-target="#bg-img">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="owl-content-des-l">
+                           <h2 class="blog-header-tit animated-txt-1">рецепты / кулинарные статьи</h2>
+                           <div class="line-dark-l animated-txt-2"></div>
+                           <h3 class="blog-header-sub-tit animated-txt-3">КУЛИНАРНЫЕ СТАТЬИ И СОВЕТЫ</h3>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> 
+         
+         <!--*-*-*-*-*-*-*-*-*-*- END BOOTSTRAP CAROUSEL *-*-*-*-*-*-*-*-*-*--> 
+         
+         <!--*-*-*-*-*-*-*-*-*-*- Modal Sections *-*-*-*-*-*-*-*-*-*--> 
+         
+         <!--======= Login Modal =========-->
+         <div class="modal fade modal-default-fade modal-light" id="modal-default-login-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Login Modal Content =========-->
+               <div class="modal-content modal-default-content animated fadeIn">
+                  
+                  <!--======= Login Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                  </div>
+                  
+                  <!--======= Login Modal Body =========-->
+                  <div class="modal-body modal-default-body">
+                     <div id="modal-default-user-image">
+                        <img src="/img/logo-dark.png" alt="logo dark" />
+                        <h3 class="animated fadeInDown">Welcome back!</h3>
+                     </div>
+                     <form id="login" method="post" action="contact.php" class="modal-default-body-form">
+                        <div class="messages">
+                        </div>
+                        <div class="controls">
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="username-login"  placeholder="Username" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="password" class="form-control animated fadeInDown" id="psw-login"  placeholder="Password" required>
+                           </div>
+                           <div class="checkbox">
+                              <label class="modal-default-checkbox">
+                                 <input type="checkbox" value="">
+                                 Remember Me </label>
+                           </div>
+                           <button type="submit" class="btn btn-s btn-gray animated fadeInDown">
+                              <span class="glyphicon glyphicon-off"></span>
+                              Login
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+                  
+                  <!--======= Login Modal Footer =========-->
+                  <div class="modal-footer modal-default-footer">
+                     <a href="#">Forget Username / Password?</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Login Modal =========--> 
+         
+         <!--======= Register Modal =========-->
+         <div class="modal fade modal-default-fade modal-light" id="modal-default-register-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Register Modal Content =========-->
+               <div class="modal-content modal-default-content">
+                  
+                  <!--======= Register Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                     <img src="/img/logo-dark.png" alt="logo dark" />
+                  </div>
+                  
+                  <!--======= Register Modal Body =========-->
+                  <div class="modal-body modal-default-body">
+                     <form id="register" method="post" action="contact.php" class="modal-default-body-form">
+                        <div class="messages">
+                        </div>
+                        <div class="controls">
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="first-name" placeholder="First Name" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="last-name" placeholder="Last Name" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="user-name" placeholder="Username" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="password" class="form-control animated fadeInDown" id="psw-reg" placeholder="Password" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="email" class="form-control animated fadeInDown" id="email-reg" placeholder="Email" required>
+                           </div>
+                           <div class="checkbox">
+                              <label class="modal-default-checkbox animated fadeInDown">
+                                 <input type="checkbox" value="" required>
+                                 I agree to the GoTham - <a href="#">Terms and Conditions</a> </label>
+                           </div>
+                           <br>
+                           <button type="submit" class="btn btn-s btn-gray animated fadeInDown">
+                              Create Account
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Register Modal =========--> 
+         
+         <!--======= Search Modal =========-->
+         <div class="modal fade modal-default-fade modal-light" id="modal-default-search-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Search Modal Content =========-->
+               <div class="modal-content modal-default-content animated fadeIn">
+                  
+                  <!--======= Search Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                     <img src="/img/logo-dark.png" alt="logo dark" />
+                  </div>
+                  
+                  <!--======= Search Modal Body =========-->
+                  <div class="modal-body modal-default-body modal-default-body-search">
+                     <form class="modal-default-body-form modal-default-search-bar">
+                        <div class="form-group">
+                           <input type="text" class="form-control" id="query" name="search" value="" placeholder="Start Typing..."  required>
+                        </div>
+                        <button type="submit" class="btn btn-s btn-gray">
+                           <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Search Modal =========--> 
+         
+         <!--======= Contact Us Modal =========-->
+         <div class="modal fade modal-default-fade modal-light" id="modal-default-contact-us-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Contact Us Modal Content =========-->
+               <div class="modal-content modal-default-content animated fadeIn">
+                  
+                  <!--======= Contact Us Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                     <img src="/img/logo-dark.png" alt="logo dark" />
+                  </div>
+                  
+                  <!--======= Contact Us Modal Body =========-->
+                  <div class="modal-body modal-default-body">
+                     <form id="top-contact" method="post" action="contact.php" class="modal-default-body-form">
+                        <div class="messages">
+                        </div>
+                        <div class="controls">
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="usrname" placeholder="Your Name" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="email" class="form-control animated fadeInDown" id="email" placeholder="Your Email" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="subject" placeholder="Your Subject" required>
+                           </div>
+                           <div class="form-group">
+                              <textarea class="form-control animated fadeInDown" rows="5" id="comment" placeholder="Your Message..." required></textarea>
+                           </div>
+                           <button type="submit" class="btn btn-s btn-gray animated fadeInDown">
+                              <span class="glyphicon glyphicon-send"></span>
+                              Submit Now
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+                  
+                  <!--======= Contact Us Modal Footer =========-->
+                  <div class="modal-footer modal-default-footer" id="modal-default-contact-us-modal-social-icons">
+                     <ul class="pull-right animated fadeInDown">
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="10M">
+                              <i class="fa fa-facebook" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="5M">
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="1M">
+                              <i class="fa fa-google-plus" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="Skype">
+                              <i class="fa fa-skype" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="25000">
+                              <i class="fa fa-youtube" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="Rss">
+                              <i class="fa fa-rss" aria-hidden="true"></i>
+                           </a> </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Contact Us Modal =========--> 
+      </header>
+      <!--*-*-*-*-*-*-*-*-*-*- End Header Section *-*-*-*-*-*-*-*-*-*-->
+      
+      <section class="blog pad-t-100 pad-b-100 pad-m-t-50 pad-m-b-50">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-10 col-sm-offset-1 pad-b-100 pad-m-b-50">
+                  <div class="blog">
+                     <div class="blog-img wow fadeIn" data-wow-delay="0.1s">
+                        <a href="#">
+                           <img class="img-responsive" src="/img/blog-05.jpg" alt="">
+                        </a>
+                        <div class="box-img">
+                           <div class="blog-share">
+                              <a href="#"><i class="fa fa-comments"></i>345</a>
+                              <span class="sep">|</span>
+                              <a href="#"><i class="fa fa-share-alt"></i>543</a>
+                              <span class="sep">|</span>
+                              <a href="#"><i class="fa fa-heart"></i>45</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="blog-date wow fadeIn" data-wow-delay="0.1s">
+                        сентябрь 23, 2017
+                        <span class="sep">|</span>
+                        от <a href="#">ГИПРО</a>
+                        <span class="sep">|</span>
+                        категория: <a href="#">КУЛИНАРНЫЕ СТАТЬИ И СОВЕТЫ</a> 
+                     </div>
+                     <div class="wow fadeIn" data-wow-delay="0.1s">
+                        <h3><a href="#">Как спланировать домашнее меню</a></h3>
+                        
+                        <div class="line-dark-l"></div>
+                     </div>
+                     <p class="wow fadeIn" data-wow-delay="0.1s">
+                        <span class="line-txt"></span>
+                        Поиск ответа на вопрос, что именно приготовить утром, днём и вечером иногда приводит к настоящему стрессу. Потому что ответ не всегда 
+						имеется. Попробуйте планировать меню заранее. И вы увидите, насколько процесс готовки станет проще, а жизнь легче.</p>
+                     <div class="quote wow fadeIn" data-wow-delay="0.1s">
+                        <blockquote>
+                           <p>Пользуясь готовым меню, очень легко составлять список продуктов для приготовления еды в ближайшее время. В магазин теперь 
+						   можно заглядывать всего лишь пару раз на неделе для пополнения провизии. Если вы запланировали на сегодня что приготовить,
+						   заранее знаете свои действия, а также имеете всё необходимое для приготовления, то вы наполовину облегчили себе задачу.Планирование
+						   меню даёт возможность всё обдумать, подготовить и выбрать. Такой сознательный подход к еде способствует более здоровому питанию.
+						   И потом, создавая меню и составляя список покупок, вы перестаёте покупать ненужное. Вам не придётся с сожалением и досадой выбрасывать испорченные продукты. Кто виноват, что они пришли в негодность раньше, чем вы планировали что-то из них приготовить.</p>
+                           <div class="author">
+                              <span>ГИПРО</span>
+                              <br>
+                              Гипоаллергенные продукты
+                           </div>
+                        </blockquote>
+                     </div>
+                     <h5>С чего начать планирование?</h5>
+                     <hr>
+                     <p class="wow fadeIn" data-wow-delay="0.1s">Составьте два списка. В первом напишите ваши любимые блюда, которые вы удачно готовите. Во втором — блюда, которые любят члены вашей семьи.
+
+                      Объедините списки. Сравните их. Совпавшие блюда и станут основой вашего меню.
+                      Загляните в кулинарные книги. Поищите нужные рецепты, а заодно и вдохновение. Подключите домочадцев к работе.
+                      Съедобные фантазии. Если остались ещё какие-то блюда, которые ранее не вызывали восхищения у членов семьи, попробуйте привить тёплые чувства к ним, несколько изменив рецепты.
+                      К примеру, вы любите готовить картофельное пюре. Это легко и быстро. А дети не особо любят его. Пофантазируйте и накормите домочадцев аппетитными котлетками из того самого пюре, обваляв их в панировочных сухарях и обжарив в растительном масле. А к ним приготовьте соус или подлив. Ещё как съедят!
+                      Варьируя и видоизменяя, точно так же поступайте с остальными блюдами.</p>
+                     <div class="row">
+                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.2s">
+                           <p class="text-justify">Делим названия блюд по группам. Здесь всё очень просто. Основные разделы могут быть такие: каши, супы, вторые блюда — мясные, рыбные, овощные.
+                      Распределите по дням недели так, чтобы меню было разнообразным и гармоничным. Cпланируйте также время, которое уйдёт на приготовление блюд. Не готовьте в один день и суп, и плов, и пироги, особенно в будни.</p>
+                        </div>
+                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                           <p class="text-justify">Теперь осталось только сохранить своё творение. Для этого можно использовать обычный блокнот. Но, пожалуй, файл в компьютере самое удобное хранилище.
+                      И напоследок. Обычный листок бумаги с меню прикреплённый магнитом к холодильнику, приведёт в восторг ваших домашних ежедневно в течение недели меняйте его. Приятного аппетита!</p>
+                        </div>
+                     </div>
+                     <hr>
+                     <div class="share pad-t-100 pad-m-t-25">
+                        <a class="item fa fa-facebook wow fadeIn" data-wow-delay="0.1s" href="#">
+                           <span>Facebook</span>
+                        </a> 
+                        <a class="item fa fa-twitter wow fadeIn" data-wow-delay="0.2s" href="#">
+                           <span>@Twitter</span>
+                        </a> 
+                        <a class="item fa fa-google-plus wow fadeIn" data-wow-delay="0.3s" href="#">
+                           <span>google+</span>
+                        </a> 
+                        <a class="item fa fa-envelope wow fadeIn" data-wow-delay="0.4s" href="#">
+                           <span>@email</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+       <footer class="footer-3">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8 col-md-offset-2 pad-b-40 ">
+                  <img src="/img/logo-gray.png" width="40" height="56" alt=""/>
+                  <div class="line-gray-c wow fadeInUp" data-wow-delay="0.2s"></div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3 col-md-push-2 col-sm-3 wow fadeIn" data-wow-delay="0.3s">
+                  <i class="fa fa-mobile icon" aria-hidden="true"></i>
+                  <h5 class="info">Телефон</h5>
+                  <p class="des">+7 (937) 726-7037</p>
+               </div>
+               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                  <i class="fa fa-map-pin icon" aria-hidden="true"></i>
+                  <h5 class="info">Адрес</h5>
+                  <p class="des">Адрес : 400026 Волгоград<br>
+                     ул. Пролетарская 49</p>
+               </div>
+               <div class="col-md-3 col-md-pull-2 col-sm-3 wow fadeIn" data-wow-delay="0.5s">
+                  <i class="fa fa-envelope-o icon" aria-hidden="true"></i>
+                  <h5 class="info">mail</h5>
+                  <p class="des">100vb@mail.ru</p>
+               </div>
+            </div>
+         </div>
+         <div class="sub wow fadeIn" data-wow-delay="0.3s">
+            <div class="container">
+               <div class="row v-align">
+                  <div class="col-md-7 col-sm-7 margin-s-b-15">
+                     <p class="terms"> 
+                        <a href="#">Поддержка</a>
+                        <span>|</span>
+                        <a href="#">Условия использования</a>
+                        <span>|</span>
+                        <a href="#">Конфиденциальность</a>
+                        <span>|</span>
+                        <a href="#">Лицензия</a></p>
+                     <p class="copyright">GiPro &copy; 2021 All Rights Reserved</p>
+                  </div>
+                  <div class="col-md-5 col-sm-5">
+                     <div class="social">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <a href="#0" class="cd-top">Top</a> 
+      <%- include('includes/footer.ejs') %>
+   </body>
+</html>

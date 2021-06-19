@@ -1,0 +1,469 @@
+<%- include('includes/head.ejs') %>
+
+    
+   </head>
+   
+   <body>
+      <!-- Preloader -->
+      <div class="loader-wrap">
+         <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+         </div>
+         <p>Загрузка..</p>
+      </div>
+      <!-- Ends -->
+      <div id="left"></div>
+      <div id="right"></div>
+      <div id="top"></div>
+      <div id="bottom"></div>
+
+      <!--*-*-*-*-*-*-*-*-*-*- Header *-*-*-*-*-*-*-*-*-*-->
+
+      <header id="header-megamenu"> 
+         
+         <!--*-*-*-*-*-*-*-*-*-*- NAVIGATION BAR *-*-*-*-*-*-*-*-*-*-->
+         <%- include('includes/navigation.ejs') %>
+
+         <!--*-*-*-*-*-*-*-*-*-*- END NAVIGATION BAR *-*-*-*-*-*-*-*-*-*--> 
+         
+         <!--*-*-*-*-*-*-*-*-*-*- BOOTSTRAP CAROUSEL *-*-*-*-*-*-*-*-*-*-->
+         
+         <div id="bg-img">
+            <div class="parallax-bg overlay-light pad-t-120 pad-b-120" style="background-image:url('img/blog-52.jpg');"
+               data-center="background-position: 50% 0px;" 
+               data-top-bottom="background-position: 50% -100px;" 
+               data-anchor-target="#bg-img">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="owl-content-des-l">
+                           <h2 class="blog-header-tit animated-txt-1">компания гипро / рецепты</h2>
+                           <div class="line-dark-l animated-txt-2"></div>
+                           <h3 class="blog-header-sub-tit animated-txt-3">гипоаллергенные продукты</h3>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> 
+         
+         <!--*-*-*-*-*-*-*-*-*-*- END BOOTSTRAP CAROUSEL *-*-*-*-*-*-*-*-*-*--> 
+         
+         <!--*-*-*-*-*-*-*-*-*-*- Modal Sections *-*-*-*-*-*-*-*-*-*--> 
+         
+         <!--======= Login Modal =========-->
+         <div class="modal fade modal-default-fade modal-dark" id="modal-default-login-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Login Modal Content =========-->
+               <div class="modal-content modal-default-content animated fadeIn">
+                  
+                  <!--======= Login Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                  </div>
+                  
+                  <!--======= Login Modal Body =========-->
+                  <div class="modal-body modal-default-body">
+                     <div id="modal-default-user-image">
+                        <img src="img/logo-light.png" alt="logo dark" />
+                        <h3 class="animated fadeInDown">Welcome back!</h3>
+                     </div>
+                     <form id="login" method="post" action="contact.php" class="modal-default-body-form">
+                        <div class="messages">
+                        </div>
+                        <div class="controls">
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="username-login"  placeholder="Username" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="password" class="form-control animated fadeInDown" id="psw-login"  placeholder="Password" required>
+                           </div>
+                           <div class="checkbox">
+                              <label class="modal-default-checkbox">
+                                 <input type="checkbox" value="">
+                                 Remember Me </label>
+                           </div>
+                           <button type="submit" class="btn btn-s btn-gray animated fadeInDown">
+                              <span class="glyphicon glyphicon-off"></span>
+                              Login
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+                  
+                  <!--======= Login Modal Footer =========-->
+                  <div class="modal-footer modal-default-footer">
+                     <a href="#">Forget Username / Password?</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Login Modal =========--> 
+         
+         <!--======= Register Modal =========-->
+         <div class="modal fade modal-default-fade modal-dark" id="modal-default-register-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Register Modal Content =========-->
+               <div class="modal-content modal-default-content">
+                  
+                  <!--======= Register Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                     <img src="img/logo-light.png" alt="logo dark" />
+                  </div>
+                  
+                  <!--======= Register Modal Body =========-->
+                  <div class="modal-body modal-default-body">
+                     <form id="register" method="post" action="contact.php" class="modal-default-body-form">
+                        <div class="messages">
+                        </div>
+                        <div class="controls">
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="first-name" placeholder="First Name" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="last-name" placeholder="Last Name" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="user-name" placeholder="Username" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="password" class="form-control animated fadeInDown" id="psw-reg" placeholder="Password" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="email" class="form-control animated fadeInDown" id="email-reg" placeholder="Email" required>
+                           </div>
+                           <div class="checkbox">
+                              <label class="modal-default-checkbox animated fadeInDown">
+                                 <input type="checkbox" value="" required>
+                                 I agree to the GoTham - <a href="#">Terms and Conditions</a> </label>
+                           </div>
+                           <br>
+                           <button type="submit" class="btn btn-s btn-gray animated fadeInDown">
+                              Create Account
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Register Modal =========--> 
+         
+         <!--======= Search Modal =========-->
+         <div class="modal fade modal-default-fade modal-dark" id="modal-default-search-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Search Modal Content =========-->
+               <div class="modal-content modal-default-content animated fadeIn">
+                  
+                  <!--======= Search Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                     <img src="img/logo-light.png" alt="logo dark" />
+                  </div>
+                  
+                  <!--======= Search Modal Body =========-->
+                  <div class="modal-body modal-default-body modal-default-body-search">
+                     <form class="modal-default-body-form modal-default-search-bar">
+                        <div class="form-group">
+                           <input type="text" class="form-control" id="query" name="search" value="" placeholder="Start Typing..."  required>
+                        </div>
+                        <button type="submit" class="btn btn-s btn-gray">
+                           <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Search Modal =========--> 
+         
+         <!--======= Contact Us Modal =========-->
+         <div class="modal fade modal-default-fade modal-dark" id="modal-default-contact-us-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Contact Us Modal Content =========-->
+               <div class="modal-content modal-default-content animated fadeIn">
+                  
+                  <!--======= Contact Us Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                     <img src="img/logo-light.png" alt="logo dark" />
+                  </div>
+                  
+                  <!--======= Contact Us Modal Body =========-->
+                  <div class="modal-body modal-default-body">
+                     <form id="top-contact" method="post" action="contact.php" class="modal-default-body-form">
+                        <div class="messages">
+                        </div>
+                        <div class="controls">
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="usrname" placeholder="Your Name" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="email" class="form-control animated fadeInDown" id="email" placeholder="Your Email" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="subject" placeholder="Your Subject" required>
+                           </div>
+                           <div class="form-group">
+                              <textarea class="form-control animated fadeInDown" rows="5" id="comment" placeholder="Your Message..." required></textarea>
+                           </div>
+                           <button type="submit" class="btn btn-s btn-gray animated fadeInDown">
+                              <span class="glyphicon glyphicon-send"></span>
+                              Submit Now
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+                  
+                  <!--======= Contact Us Modal Footer =========-->
+                  <div class="modal-footer modal-default-footer" id="modal-default-contact-us-modal-social-icons">
+                     <ul class="pull-right animated fadeInDown">
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="10M">
+                              <i class="fa fa-facebook" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="5M">
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="1M">
+                              <i class="fa fa-google-plus" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="Skype">
+                              <i class="fa fa-skype" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="25000">
+                              <i class="fa fa-youtube" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="Rss">
+                              <i class="fa fa-rss" aria-hidden="true"></i>
+                           </a> </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Contact Us Modal =========--> 
+      </header>
+      <!--*-*-*-*-*-*-*-*-*-*- End Header Section *-*-*-*-*-*-*-*-*-*-->
+      
+      <section class="blog-list">
+         <div class="container">
+            <div class="row v-align blog-list-img margin-t-200 margin-m-t-50">
+               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                  <div class="col-md-9 col-md-push-2 single-post">
+                     <h3><a href="blog-single-left-sidebar.html">домашнее меню</a></h3>
+                     <h4 class="heading-des">КАТЕГОРИЯ: ПЛАНИРОВАНИЕ</h4>
+                     <div class="line-orange-c"></div>
+                     <p class="text-justify">Поиск ответа на вопрос, что именно приготовить утром, днём и вечером иногда приводит к настоящему стрессу. Потому что ответ не всегда имеется. Попробуйте планировать меню заранее. И вы увидите, насколько процесс готовки станет проще, а жизнь легче...</p>
+                     <p class="info">
+                        <span class="line-txt"></span>
+                        сентябрь 15, 2017</p>
+                     <a class="btn btn-xs btn-dark margin-t-25" href="recept1.html">подробнее</a>
+                  </div>
+                  <div class="heading-side-l">
+                     <div class="v-center">
+                        <h2>сентябрь 15, 2017
+                           <span class="line-orange-l"></span>
+                        </h2>
+                        <span>01</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
+                  <div class="blog-img">
+                     <a href="recept1.html">
+                        <img class="img-responsive" src="img/events-07.jpg" alt="">
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="row v-align blog-list-img margin-t-100 margin-m-t-25">
+               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                  <div class="blog-img">
+                     <a href="recept1.html">
+                        <img class="img-responsive" src="img/agency-19.jpg" alt="">
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-6 text-center wow fadeIn" data-wow-delay="0.3s">
+                  <div class="col-md-9 col-md-push-2 single-post">
+                     <h3><a href="blog-single-left-sidebar.html">ПРИПРАВЫ И ПРЯНОСТИ</a></h3>
+                     <h4 class="heading-des">КАТЕГОРИЯ: ПРИПРАВЫ</h4>
+                     <div class="line-orange-c"></div>
+                     <p class="text-justify">Гурманом является в той или иной степени каждый человек, владеющий навыками приготовления пищи. Но мало кто знает, как правильно сочетать продукты и специи, чтобы они были не только вкусными, но и полезными.....</p>
+                     <p class="info">
+                        <span class="line-txt"></span>
+                        октябрь 19, 2017</p>
+                     <a class="btn btn-xs btn-dark margin-t-25" href="recept1.html">подробнее</a>
+                  </div>
+                  <div class="heading-side-r">
+                     <div class="v-center">
+                        <h2>октябрь 19, 2017
+                           <span class="line-orange-l"></span>
+                        </h2>
+                        <span>02</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row v-align blog-list-img margin-t-100 margin-m-t-25">
+               <div class="col-md-6 col-sm-6 text-center wow fadeIn" data-wow-delay="0.2s">
+                  <div class="col-md-9 col-md-push-2 single-post">
+                     <h3><a href="blog-single-left-sidebar.html">лучшие гарниры</a></h3>
+                     <h4 class="heading-des">категория: гарниры</h4>
+                     <div class="line-orange-c"></div>
+                     <p class="text-justify">Aliquam erat volutpat. Nullam et felis sit amet leo imperdiet dictum quis sed tortor. Vestibulum vitae nibh at ligula mattis ornare ut ultricies massa. Suspendisse sepe facilisis, urna vel fret commodo consequat, dolor della fer urna vehicula diam, id</p>
+                     <p class="info">
+                        <span class="line-txt"></span>
+                        ноябрь 27, 2017</p>
+                     <a class="btn btn-xs btn-dark margin-t-25" href="recept1.html">подробнее</a>
+                  </div>
+                  <div class="heading-side-l">
+                     <div class="v-center">
+                        <h2>ноябрь 27, 2017
+                           <span class="line-orange-l"></span>
+                        </h2>
+                        <span>03</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                  <div class="blog-img">
+                     <a href="recept1.html">
+                        <img class="img-responsive" src="img/blog-03.jpg" alt="">
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="row v-align blog-list-img margin-t-100 margin-m-t-25">
+               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                  <div class="blog-img">
+                     <a href="recept1.html">
+                        <img class="img-responsive" src="img/blog-01.jpg" alt="">
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-6 text-center wow fadeIn" data-wow-delay="0.3s">
+                  <div class="col-md-9 col-md-push-2 single-post">
+                     <h3><a href="blog-single-left-sidebar.html">польза салатов</a></h3>
+                     <h4 class="heading-des">категория: салаты</h4>
+                     <div class="line-orange-c"></div>
+                     <p class="text-justify">Aliquam erat volutpat. Nullam et felis sit amet leo imperdiet dictum quis sed tortor. Vestibulum vitae nibh at ligula mattis ornare ut ultricies massa. Suspendisse sepe facilisis, urna vel fret commodo consequat, dolor della fer urna vehicula diam, id</p>
+                     <p class="info">
+                        <span class="line-txt"></span>
+                        декабрь 01, 2017</p>
+                     <a class="btn btn-xs btn-dark margin-t-25" href="recept1.html">подробнее</a>
+                  </div>
+                  <div class="heading-side-r">
+                     <div class="v-center">
+                        <h2>декабрь 01, 2017
+                           <span class="line-orange-l"></span>
+                        </h2>
+                        <span>04</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12 margin-t-100 margin-b-100 margin-m-t-25 margin-m-b-25">
+                  <div class="text-center">
+                     <ul class="pagination wow zoomIn" data-wow-delay="0.2s">
+                        <li class="prev"> 
+                           <a href="#">
+                              <img src="img/icon/arrow-left.png" width="25" height="25" alt=""/>
+                           </a> 
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li class="active"> <a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">14</a></li>
+                        <li class="next"> 
+                           <a href="#">
+                              <img src="img/icon/arrow-right.png" width="25" height="25" alt=""/>
+                           </a> 
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer class="footer-3">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8 col-md-offset-2 pad-b-40 ">
+                  <img src="img/logo-gray.png" width="40" height="56" alt=""/>
+                  <div class="line-gray-c wow fadeInUp" data-wow-delay="0.2s"></div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3 col-md-push-2 col-sm-3 wow fadeIn" data-wow-delay="0.3s">
+                  <i class="fa fa-mobile icon" aria-hidden="true"></i>
+                  <h5 class="info">Телефон</h5>
+                  <p class="des">+7 (937) 726-7037</p>
+               </div>
+               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                  <i class="fa fa-map-pin icon" aria-hidden="true"></i>
+                  <h5 class="info">Адрес</h5>
+                  <p class="des">Адрес : 400026 Волгоград<br>
+                     ул. Пролетарская 49</p>
+               </div>
+               <div class="col-md-3 col-md-pull-2 col-sm-3 wow fadeIn" data-wow-delay="0.5s">
+                  <i class="fa fa-envelope-o icon" aria-hidden="true"></i>
+                  <h5 class="info">mail</h5>
+                  <p class="des">100vb@mail.ru</p>
+               </div>
+            </div>
+         </div>
+         <div class="sub wow fadeIn" data-wow-delay="0.3s">
+            <div class="container">
+               <div class="row v-align">
+                  <div class="col-md-7 col-sm-7 margin-s-b-15">
+                     <p class="terms"> 
+                        <a href="#">Поддержка</a>
+                        <span>|</span>
+                        <a href="#">Условия использования</a>
+                        <span>|</span>
+                        <a href="#">Конфиденциальность</a>
+                        <span>|</span>
+                        <a href="#">Лицензия</a></p>
+                     <p class="copyright">GiPro &copy; 2021 All Rights Reserved</p>
+                  </div>
+                  <div class="col-md-5 col-sm-5">
+                     <div class="social">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <a href="#0" class="cd-top">Top</a> 
+      
+      <%- include('includes/footer.ejs') %>
+      
+   </body>
+</html>

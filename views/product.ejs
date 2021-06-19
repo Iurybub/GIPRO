@@ -1,0 +1,446 @@
+<%- include('./includes/head.ejs') %>
+    
+   </head>
+   
+   <body>
+      <!-- Preloader -->
+      <div class="loader-wrap">
+         <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+         </div>
+         <p>Загрузка...</p>
+      </div>
+      <!-- Ends -->
+      <div id="left"></div>
+      <div id="right"></div>
+      <div id="top"></div>
+      <div id="bottom"></div>
+      
+      <!--*-*-*-*-*-*-*-*-*-*- Header *-*-*-*-*-*-*-*-*-*-->
+
+      <header id="header-megamenu"> 
+         
+         <!--*-*-*-*-*-*-*-*-*-*- NAVIGATION BAR *-*-*-*-*-*-*-*-*-*-->
+         <%- include('./includes/navigation.ejs') %>
+         <!--*-*-*-*-*-*-*-*-*-*- END NAVIGATION BAR *-*-*-*-*-*-*-*-*-*--> 
+         
+         <!--*-*-*-*-*-*-*-*-*-*- BOOTSTRAP CAROUSEL *-*-*-*-*-*-*-*-*-*--> 
+         
+         <div id="bg-img">
+            <div class="parallax-bg pad-t-150 pad-b-150 pad-section-50 overlay-light" style="background-image:url(img/blog-02.jpg)" 
+               data-center="background-position: 50% 0px;" 
+               data-top-bottom="background-position: 50% -100px;" 
+               data-anchor-target="#bg-img">
+               <div class="parallax-container">
+                  <div class="parallax-content" 
+                     data-206-top="opacity: 1"
+                     data-0-top="opacity: 0"
+                     data-anchor-target="#bg-img h1">
+                     <h1 class="text-uppercase txt-dark">продукты / котлеты</h1>
+                     <p class="txt-dark">котлеты куриные гипоалергенные</p>
+                  </div>
+               </div>
+            </div>
+         </div> 
+         
+         <!--*-*-*-*-*-*-*-*-*-*- END BOOTSTRAP CAROUSEL *-*-*-*-*-*-*-*-*-*--> 
+         
+         <!--*-*-*-*-*-*-*-*-*-*- Modal Sections *-*-*-*-*-*-*-*-*-*--> 
+         
+         <!--======= Login Modal =========-->
+         <div class="modal fade modal-default-fade modal-light" id="modal-default-login-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Login Modal Content =========-->
+               <div class="modal-content modal-default-content animated fadeIn">
+                  
+                  <!--======= Login Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                  </div>
+                  
+                  <!--======= Login Modal Body =========-->
+                  <div class="modal-body modal-default-body">
+                     <div id="modal-default-user-image">
+                        <img src="img/logo-dark.png" alt="logo dark" />
+                        <h3 class="animated fadeInDown">Welcome back!</h3>
+                     </div>
+                     <form id="login" method="post" action="contact.php" class="modal-default-body-form">
+                        <div class="messages">
+                        </div>
+                        <div class="controls">
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="username-login"  placeholder="Username" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="password" class="form-control animated fadeInDown" id="psw-login"  placeholder="Password" required>
+                           </div>
+                           <div class="checkbox">
+                              <label class="modal-default-checkbox">
+                                 <input type="checkbox" value="">
+                                 Remember Me </label>
+                           </div>
+                           <button type="submit" class="btn btn-s btn-gray animated fadeInDown">
+                              <span class="glyphicon glyphicon-off"></span>
+                              Login
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+                  
+                  <!--======= Login Modal Footer =========-->
+                  <div class="modal-footer modal-default-footer">
+                     <a href="#">Forget Username / Password?</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Login Modal =========--> 
+         
+         <!--======= Register Modal =========-->
+         <div class="modal fade modal-default-fade modal-light" id="modal-default-register-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Register Modal Content =========-->
+               <div class="modal-content modal-default-content">
+                  
+                  <!--======= Register Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                     <img src="img/logo-dark.png" alt="logo dark" />
+                  </div>
+                  
+                  <!--======= Register Modal Body =========-->
+                  <div class="modal-body modal-default-body">
+                     <form id="register" method="post" action="contact.php" class="modal-default-body-form">
+                        <div class="messages">
+                        </div>
+                        <div class="controls">
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="first-name" placeholder="First Name" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="last-name" placeholder="Last Name" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="user-name" placeholder="Username" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="password" class="form-control animated fadeInDown" id="psw-reg" placeholder="Password" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="email" class="form-control animated fadeInDown" id="email-reg" placeholder="Email" required>
+                           </div>
+                           <div class="checkbox">
+                              <label class="modal-default-checkbox animated fadeInDown">
+                                 <input type="checkbox" value="" required>
+                                 I agree to the GoTham - <a href="#">Terms and Conditions</a> </label>
+                           </div>
+                           <br>
+                           <button type="submit" class="btn btn-s btn-gray animated fadeInDown">
+                              Create Account
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Register Modal =========--> 
+         
+         <!--======= Search Modal =========-->
+         <div class="modal fade modal-default-fade modal-light" id="modal-default-search-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Search Modal Content =========-->
+               <div class="modal-content modal-default-content animated fadeIn">
+                  
+                  <!--======= Search Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                     <img src="img/logo-dark.png" alt="logo dark" />
+                  </div>
+                  
+                  <!--======= Search Modal Body =========-->
+                  <div class="modal-body modal-default-body modal-default-body-search">
+                     <form class="modal-default-body-form modal-default-search-bar">
+                        <div class="form-group">
+                           <input type="text" class="form-control" id="query" name="search" value="" placeholder="Start Typing..."  required>
+                        </div>
+                        <button type="submit" class="btn btn-s btn-gray">
+                           <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Search Modal =========--> 
+         
+         <!--======= Contact Us Modal =========-->
+         <div class="modal fade modal-default-fade modal-light" id="modal-default-contact-us-modal" role="dialog">
+            <div class="modal-dialog modal-default-dialog">
+               
+               <!--======= Contact Us Modal Content =========-->
+               <div class="modal-content modal-default-content animated fadeIn">
+                  
+                  <!--======= Contact Us Modal Header =========-->
+                  <div class="modal-header modal-default-header">
+                     <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                     </button>
+                     <img src="img/logo-dark.png" alt="logo dark" />
+                  </div>
+                  
+                  <!--======= Contact Us Modal Body =========-->
+                  <div class="modal-body modal-default-body">
+                     <form id="top-contact" method="post" action="contact.php" class="modal-default-body-form">
+                        <div class="messages">
+                        </div>
+                        <div class="controls">
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="usrname" placeholder="Your Name" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="email" class="form-control animated fadeInDown" id="email" placeholder="Your Email" required>
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control animated fadeInDown" id="subject" placeholder="Your Subject" required>
+                           </div>
+                           <div class="form-group">
+                              <textarea class="form-control animated fadeInDown" rows="5" id="comment" placeholder="Your Message..." required></textarea>
+                           </div>
+                           <button type="submit" class="btn btn-s btn-gray animated fadeInDown">
+                              <span class="glyphicon glyphicon-send"></span>
+                              Submit Now
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+                  
+                  <!--======= Contact Us Modal Footer =========-->
+                  <div class="modal-footer modal-default-footer" id="modal-default-contact-us-modal-social-icons">
+                     <ul class="pull-right animated fadeInDown">
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="10M">
+                              <i class="fa fa-facebook" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="5M">
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="1M">
+                              <i class="fa fa-google-plus" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="Skype">
+                              <i class="fa fa-skype" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="25000">
+                              <i class="fa fa-youtube" aria-hidden="true"></i>
+                           </a> </li>
+                        <li> <a target="_blank" href="#" data-toggle="tooltip" data-placement="top" title="Rss">
+                              <i class="fa fa-rss" aria-hidden="true"></i>
+                           </a> </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--======= End Contact Us Modal =========--> 
+      </header>
+      <!--*-*-*-*-*-*-*-*-*-*- End Header Section *-*-*-*-*-*-*-*-*-*-->
+      
+      <section class="pad-t-100 pad-b-100 pad-section-100">
+         <div class="container">
+            <div class="row">
+
+               <div class="col-sm-7 pad-t-100 pad-m-t-25">
+                  <p class="txt-square wow fadeIn">новые технологии в пищевом производстве</p>
+                  <h2 class="text-capitalize pad-t-30 wow fadeIn" data-wow-delay="0.1s">котлеты куриные</h2>
+                  <p class="lead wow fadeIn" data-wow-delay="0.2s">изготовленны по оригинальной технологии</p>
+                  <hr>
+                  <p class="txt-16 wow fadeIn" data-wow-delay="0.3s">Cras at lacus fringilla, tempor metus non, fermentum quam. Vivamus congue sem ornare rhoncus aliquam. Integer convallis purus eget nibh pretium, nec mattis ex aliquet. Mauris cursus rutrum blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce porta scelerisque turpis, eget pulvinar orci finibus vitae.</p>
+               </div>
+               <div class="col-sm-4 col-md-offset-1 pad-t-100 pad-m-t-25 wow fadeIn" data-wow-delay="0.2s">
+               <div class="zoom-gallery">
+                        <a href="img/product/kot2.jpg" class="work-4-item" title="Котлеты">
+                           <img src="img/product/kot2.jpg" class="img-responsive" alt="">
+                           <div class="work-4-overlay">
+                              <div class="work-4-overlay-item">
+                                 <div class="work-4-des">
+                                    <span>
+                                       <i class="work-4-icon fa fa-picture-o" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="work-4-top-tit">котлеты куриные</span>
+                                    <span class="work-4-sub-tit">3 фото</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </a> 
+                        <a href="img/product/fric-1.jpg" title="Фрикадельки"></a> 
+                        <a href="img/product/pel-1.jpg" title="Пельмени"></a>
+               </div>
+			   </div>
+            </div>
+         </div>
+      </section>
+	  <section class="tabs-3 pad-b-150 pad-m-b-50">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8 col-md-offset-2" id="tabs-slide-left-2">
+                  <ul class="nav nav-tabs nav-justified">
+                     <li><a href="#tabs-des-1" title="" class="tabulous_active">состав</a></li>
+                     <li><a href="#tabs-des-2" title="">отзывы</a></li><span class="tabulousclear"></span>
+                  </ul>
+                  <div id="tabs_container" style="height: 185px;">
+                     <div id="tabs-des-1" style="position: absolute; top: 0px;">
+                        <h4 class="title">состав</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel augue sed dolor euismod dictum in efficitur enim. Sed cursus interdum risus at cursus. Pellentesque id consectetur lectus, sit amet facilisis orci. Ut scelerisque odio nunc, in laoreet massa gravida non. </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel augue sed dolor euismod dictum in efficitur enim. Sed cursus interdum risus at cursus. Pellentesque id consectetur lectus, sit amet facilisis orci. Ut scelerisque odio nunc, in laoreet massa gravida non.</p>
+                     </div>
+                     
+                     <div id="tabs-des-2" class="hideleft" style="position: absolute; top: 0px;">
+                        <h4 class="title">Отзыв 1</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel augue sed dolor euismod dictum in efficitur enim. Sed cursus interdum risus at cursus. Pellentesque id consectetur lectus, sit amet facilisis orci. Ut scelerisque odio nunc, in laoreet massa gravida non. </p>
+                        <h4 class="title">Отзыв 2</h4>
+						<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem.Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="pad-b-200 pad-m-t-25 pad-m-b-50">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6 text-center pad-m-b-25 wow fadeIn">
+                  <p class="txt-square">похожие продукты</p>
+                  <img src="img/icon/arrow2-right.png" alt=""/>
+               </div>
+               <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                  <p>Возможно вас заинтересуют другие продукты нашего производства.Обширный выбор на все случаи жизни.</p>
+               </div>
+               <div class="col-md-12">
+                  <hr>
+                  <div class="portfolio-single owl-carousel owl-theme pad-t-50 text-center wow fadeIn" data-wow-delay="0.2s">
+                     <div>
+					    <a href="product-1.html" class="work-4-item">
+                        <img src="img/product/kot1.jpg" alt=""/>
+                        <div class="margin-t-25">
+                           <p class="txt-square">котлеты рыбные</p>
+                        </div>
+						</a>
+                     </div>
+                     <div>
+					    <a href="product-1.html" class="work-4-item">
+                        <img src="img/product/kot2.jpg" alt=""/>
+                        <div class="margin-t-25">
+                           <p class="txt-square">котлеты куриные</p>
+                        </div>
+						</a>
+                     </div>
+                     <div>
+					    <a href="product-1.html" class="work-4-item">
+                        <img src="img/product/kot3.jpg" alt=""/>
+                        <div class="margin-t-25">
+                           <p class="txt-square">котлеты говяжьи</p>
+                        </div>
+						</a>
+                     </div>
+                     <div>
+					    <a href="product-1.html" class="work-4-item">
+                        <img src="img/product/pel.jpg" alt=""/>
+                        <div class="margin-t-25">
+                           <p class="txt-square">пельмени куриные</p>
+                        </div>
+						</a>
+                     </div>
+                     <div>
+					    <a href="product-1.html" class="work-4-item">
+                        <img src="img/product/fric.jpg" alt=""/>
+                        <div class="margin-t-25">
+                           <p class="txt-square">фрикадельки говяжьи</p>
+                        </div>
+						</a>
+                     </div>
+                     <div>
+					    <a href="product-1.html" class="work-4-item">
+                        <img src="img/product/tef.jpg" alt=""/>
+                        <div class="margin-t-25">
+                           <p class="txt-square">тефтели куриные</p>
+                        </div>
+						</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+       <footer class="footer-3">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8 col-md-offset-2 pad-b-40 ">
+                  <img src="img/logo-gray.png" width="40" height="56" alt=""/>
+                  <div class="line-gray-c wow fadeInUp" data-wow-delay="0.2s"></div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3 col-md-push-2 col-sm-3 wow fadeIn" data-wow-delay="0.3s">
+                  <i class="fa fa-mobile icon" aria-hidden="true"></i>
+                  <h5 class="info">Телефон</h5>
+                  <p class="des">+7 (937) 726-7037</p>
+               </div>
+               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                  <i class="fa fa-map-pin icon" aria-hidden="true"></i>
+                  <h5 class="info">Адрес</h5>
+                  <p class="des">Адрес : 400026 Волгоград<br>
+                     ул. Пролетарская 49</p>
+               </div>
+               <div class="col-md-3 col-md-pull-2 col-sm-3 wow fadeIn" data-wow-delay="0.5s">
+                  <i class="fa fa-envelope-o icon" aria-hidden="true"></i>
+                  <h5 class="info">mail</h5>
+                  <p class="des">100vb@mail.ru</p>
+               </div>
+            </div>
+         </div>
+         <div class="sub wow fadeIn" data-wow-delay="0.3s">
+            <div class="container">
+               <div class="row v-align">
+                  <div class="col-md-7 col-sm-7 margin-s-b-15">
+                     <p class="terms"> 
+                        <a href="#">Поддержка</a>
+                        <span>|</span>
+                        <a href="#">Условия использования</a>
+                        <span>|</span>
+                        <a href="#">Конфиденциальность</a>
+                        <span>|</span>
+                        <a href="#">Лицензия</a></p>
+                     <p class="copyright">GiPro &copy; 2021 All Rights Reserved</p>
+                  </div>
+                  <div class="col-md-5 col-sm-5">
+                     <div class="social">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <a href="#0" class="cd-top">Top</a> 
+      
+     <%- include('./includes/footer.ejs') %>
+   </body>
+</html>
