@@ -4,17 +4,19 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mysql = require('mysql2')
+const mongoose = require('mongoose');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const adminRouter = require('./routes/admin');
 
-const mysqlConfig = {
-  host: "mysql_server",
-  user: "dan",
-  password: "secret",
-  database: "test_db"
-}
+
+mongoose.connect('mongodb://mongodb:27017/test', { useNewUrlParser: true });
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'CONNECTION ERROR'))
+db.once('open', () => {
+  console.log('Connected!')
+})
 const app = express();
 
 // view engine setup

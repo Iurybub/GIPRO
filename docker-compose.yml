@@ -7,19 +7,28 @@ services:
     volumes:
       - .:/src
     command: npm run start:dev
+    links:
+      - mongodb
     ports:
       - "3000:3000"
     environment:
       NODE_ENV: development
       DEBUG: nodejs-docker-express:*
-    depends_on:
-      - mysql_server
+  mongodb:
+    image: mongo:bionic
 
-  mysql_server:
-    image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
-    environment:
-      - MYSQL_DATABASE=test_db
-      - MYSQL_USER=dan
-      - MYSQL_PASSWORD=secret
-      - MYSQL_ROOT_PASSWORD=secret
+    ports:
+      - 27017:27017
+    volumes:
+      - data:/data/db
+volumes:
+  data:
+
+  # mysql_server:
+  #   image: mysql:8.0
+  #   command: --default-authentication-plugin=mysql_native_password
+  #   environment:
+  #     - MYSQL_DATABASE=test_db
+  #     - MYSQL_USER=dan
+  #     - MYSQL_PASSWORD=secret
+  #     - MYSQL_ROOT_PASSWORD=secret
