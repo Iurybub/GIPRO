@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/about', indexController.getAboutPage)
 router.get('/products', indexController.getProductPage)
+router.get('/products/:key', indexController.getProductDetailsPage)
 router.get('/recipes', indexController.getRecipesPage)
 router.get('/recipes/:key', indexController.getRecipeDetailsPage)
 

@@ -6,6 +6,10 @@ exports.getProductPage = (req, res, next) => {
     res.render('product',
         { title: 'Товар' });
   };
+exports.getProductDetailsPage = (req, res, next) => {
+    res.render('product-details',
+        { title: 'Товар' });
+  };
 exports.getRecipesPage = (req, res, next) => {
     res.render('recipe',
         { title: 'Рецепты' });
