@@ -3,16 +3,14 @@ services:
   web:
     build:
       context: ./
-      target: dev
     volumes:
       - .:/src
-    command: npm run start:dev
+    command: node app.js
     links:
       - mongodb
     ports:
       - "3000:3000"
     environment:
-      NODE_ENV: development
       DEBUG: nodejs-docker-express:*
   mongodb:
     image: mongo:bionic
