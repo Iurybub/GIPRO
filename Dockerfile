@@ -1,17 +1,13 @@
 FROM node:14-alpine as base
 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+ENV NODE_ENV=production
 
-WORKDIR /home/node/app
+WORKDIR /app
 
-COPY package*.json ./
+COPY package.json package-lock*.json ./
 
-USER node
+RUN npm install && npm cache clean --force
 
-RUN npm install
+COPY . .
 
-COPY --chown=node:node . .
-
-EXPOSE 8080
-
-CMD [ "node", "app.js" ]
+CMD ["node", "./bin/www"]
